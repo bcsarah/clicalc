@@ -4,12 +4,13 @@ CLIcalc é um projeto pessoal, desenvolvido como **template base** de várias li
 
 A ideia principal é usar este projeto como um **desafio prático**, onde você recria sua estrutura em outra linguagem, como JavaScript, Java, TypeScript, Shell etc, aprendendo conceitos fundamentais como:
 - Variáveis
-- Tipos de dados
-- Operadores 
-- Condicionais
-- Loops/Iteração
-- Funções
-- Modularização
+- Tipos de dados (int, str, float)
+- Operadores (+, -, *, /, =)
+- Condicionais (if, else, switch)
+- Loops/Iteração (for, while)
+- Funções (def)
+- Tratamento de Excessão (try/catch)
+- Modularização (import)
 
 Para usar, basta entrar na pasta de alguma linguagem e rodar, verificando suas dependencias.
 
