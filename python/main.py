@@ -1,5 +1,5 @@
 # Importa todas as funções do arquivo modules/auxiliary e duas funções de os
-from modules.auxiliary import *
+from modules.auxiliary import validarNúmero, validarOperação, calcularResultado
 from os import system, name
 
 
@@ -13,12 +13,13 @@ def main() -> None:
 
         # Define as variáveis para os cálculos
         num1 = validarNúmero("Primeiro número: ")
-        operação = validarOperação("Operação (+, -, *, /, **, //): ")
+        operação = validarOperação("Operação (+, -, *, /, **, //, %): ")
         num2 = validarNúmero("Segundo número: ")
 
         # Cálculo
         resultado = calcularResultado(operação, num1, num2)
         input(f'\nO resultado é: {resultado}')
+
 
 # Se o nome do arquivo for main, roda.
 # Ele também trata o erro que dá ao parar a execução com ctrl + c

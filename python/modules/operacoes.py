@@ -21,3 +21,7 @@ def expoenciar(a: float, b: float) -> float:
 # Função para Radiciar
 def radiciar(a: float, b: float) -> float:
     return a ** (1 / b)
+
+# Função para calcular Resto da Divisão
+def restoDivisão(a: float, b: float) -> float:
+    return a % b

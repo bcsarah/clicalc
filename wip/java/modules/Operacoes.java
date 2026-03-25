@@ -1,6 +1,6 @@
 package modules;
 
-public class Operações {
+public class Operacoes {
     public static double somar(double a, double b) {
         return a + b;
     }
@@ -23,5 +23,9 @@ public class Operações {
 
     public static double radiciar(double a, double b) {
         return Math.pow(a, (1/b));
+    }
+
+    public static double restoDivisão(double a, double b) {
+        return a % b;
     }
 }

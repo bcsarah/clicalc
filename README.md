@@ -41,6 +41,7 @@ Contém as funções matemáticas, como:
 - `dividir`  
 - `expoenciar`  
 - `radiciar`  
+- `resto da divisão`
 
 ---
 ## ⚙️ Regras

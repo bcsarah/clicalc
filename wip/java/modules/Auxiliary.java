@@ -1,6 +1,5 @@
-import java.util.Scanner;
-import 
 package modules;
+import java.util.Scanner;
 
 public class Auxiliary {
     static Scanner scan = new Scanner(System.in);

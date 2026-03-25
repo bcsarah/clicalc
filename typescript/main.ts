@@ -15,7 +15,7 @@ function main(): void {
 
         // Define as variáveis para os cálculos
         let num1: number = validarNúmero('Primeiro número: ');
-        let operação: string = validarOperação('Operação (+, -, *, /, **, //): ');
+        let operação: string = validarOperação('Operação (+, -, *, /, **, //, %): ');
         let num2: number = validarNúmero('Segundo número: ');
 
         // Cálculo
