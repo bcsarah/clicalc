@@ -1,5 +1,5 @@
 # Importa todas as funções do arquivo modules/auxiliary e duas funções de os
-from modules.auxiliary import validarNúmero, validarOperação, calcularResultado
+from modules.auxiliary import validarNumero, validarOperaçao, calcularResultado
 from os import system, name
 
 
@@ -12,12 +12,12 @@ def main() -> None:
         print('#  CLIcalc Py  #')
 
         # Define as variáveis para os cálculos
-        num1 = validarNúmero("Primeiro número: ")
-        operação = validarOperação("Operação (+, -, *, /, **, //, %): ")
-        num2 = validarNúmero("Segundo número: ")
+        num1 = validarNumero("Primeiro número: ")
+        operacao = validarOperaçao("Operação (+, -, *, /, **, //, %): ")
+        num2 = validarNumero("Segundo número: ")
 
         # Cálculo
-        resultado = calcularResultado(operação, num1, num2)
+        resultado = calcularResultado(operacao, num1, num2)
         input(f'\nO resultado é: {resultado}')
 
 

@@ -1,19 +1,66 @@
 package modules;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
+
+// Métodos Auxiliares
 public class Auxiliary {
     static Scanner scan = new Scanner(System.in);
     
-    public static String perguntar(String prompt) {
-        System.out.print(prompt);
+    // Método para limpar o console
+    public static void clearScreen() {  
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }  
+
+    // Métodos para perguntar, retornando String ou Double
+    public static String perguntar(String frase) {
+        System.out.print(frase);
         return scan.next();
     }
 
-    public static double perguntarDouble(String prompt) {
-        System.out.print(prompt);
+    public static double perguntarDouble(String frase) {
+        System.out.print(frase);
         return scan.nextDouble();
     }
-    public static double validarNúmero(String prompt) {
-        return 1;
+
+
+    // Método para validar número a partir de uma pergunta
+    public static double validarNumero(String frase) {
+        while (true) {
+            Double num = perguntarDouble(frase);
+            return num;
+        }
+    }
+
+
+    // Método para validar a operação
+    public static String validarOperacao(String frase) {
+        ArrayList<String> operacoes = new ArrayList<>(List.of("+", "-", "*", "/", "**", "//", "%"));
+
+        while (true) {
+            String operacao = perguntar(frase);
+            if (operacoes.contains(operacao)) {
+                return operacao;
+            } else {
+                System.out.println("Essa não é uma operação válida. Tente novamente.\n");
+            }
+        }
+    }
+
+
+    // Método para calcular o resultado com base nas operações
+    public static Double calcularResultado(String operacao, Double a, Double b) {
+        switch (operacao) {
+            case "+": return Operacoes.somar(a, b);
+            case "-": return Operacoes.diminuir(a, b);
+            case "*": return Operacoes.multiplicar(a, b);
+            case "/": return Operacoes.dividir(a, b);
+            case "**": return Operacoes.expoenciar(a, b);
+            case "//": return Operacoes.radiciar(a, b);
+            case "%": return Operacoes.restoDivisao(a, b);
+            default: throw new Error("Operação inválida!");
+        }
     }
 }

@@ -1,11 +1,12 @@
 // Importa o prompt-sync e as funções de operações
-import { somar, diminuir, multiplicar, dividir, expoenciar, radiciar, restoDivisão } from './operacoes'
+import { somar, diminuir, multiplicar, dividir, expoenciar, radiciar, restoDivisao } from './operacoes'
 import promptSync from 'prompt-sync';
 
 const input = promptSync();
 
+
 // Função para validar o número
-export function validarNúmero(frase: string): number {
+export function validarNumero(frase: string): number {
     while (true) {
         let entrada: string = input(frase);
         let num: number = parseFloat(entrada);
@@ -18,30 +19,32 @@ export function validarNúmero(frase: string): number {
     }
 }
 
+
 // Função para validar a operação
-export function validarOperação(frase: string): string {
-    const operações: Array<String> = ['+', '-', '*', '/', '**', '//', '%'];
+export function validarOperacao(frase: string): string {
+    const operacoes: Array<String> = ['+', '-', '*', '/', '**', '//', '%'];
 
     while (true) {
-        let operação = input(frase);
-        if (operação in operações) {
-            return operação
+        let operacao = input(frase);
+        if (operacao in operacoes) {
+            return operacao
         } else {
             console.log('Essa não é uma operação válida. Tente novamente.\n');
         }
     }
 }
 
+
 // Função para calcular o resultado
-export function calcularResultado(operação: string, a: number, b: number): number {
-    switch (operação) {
+export function calcularResultado(operacao: string, a: number, b: number): number {
+    switch (operacao) {
         case '+': return somar(a, b);
         case '-': return diminuir(a, b);
         case '*': return multiplicar(a, b);
         case '/': return dividir(a, b);
         case '**': return expoenciar(a, b);
         case '//': return radiciar(a, b);
-        case '%': return restoDivisão(a, b);
+        case '%': return restoDivisao(a, b);
         default: throw new Error('Operação Inválida');
     }
 }

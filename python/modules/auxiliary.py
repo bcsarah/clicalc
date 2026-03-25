@@ -1,5 +1,5 @@
 # Importa todas as funções de operações
-from modules.operacoes import somar, diminuir, multiplicar, dividir, expoenciar, radiciar, restoDivisão
+from modules.operacoes import somar, diminuir, multiplicar, dividir, expoenciar, radiciar, restoDivisao
 
 
 # Função para ver se o número é válido
@@ -13,11 +13,11 @@ def validarNúmero(frase: str) -> float:
 
 # Função para validar, ver se a operação é válida
 def validarOperação(frase: str) -> str:
-    operações = ['+', '-', '*', '/', '**', '//', '%']
+    operacoes = ['+', '-', '*', '/', '**', '//', '%']
     while True:
-        operação = input(frase).strip()
-        if operação in operações:
-            return operação
+        operacao = input(frase).strip()
+        if operacao in operacoes:
+            return operacao
         else:
             print('Este não é uma operação válida. Tente novamente.\n')
 
@@ -31,4 +31,4 @@ def calcularResultado(operação: str, a: float, b: float) -> float:
         case '/': return dividir(a, b)
         case '**': return expoenciar(a, b)
         case '//': return radiciar(a, b)
-        case '%': return restoDivisão(a, b)
+        case '%': return restoDivisao(a, b)
