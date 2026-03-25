@@ -13,23 +13,13 @@ def validarNúmero(frase: str) -> float:
 
 # Função para validar, ver se a operação é válida
 def validarOperação(frase: str) -> str:
+    operações = ['+', '-', '*', '/', '**', '//']
     while True:
         operação = input(frase).strip()
-        match operação:
-            case '+':
-                return operação
-            case '-':
-                return operação
-            case '*':
-                return operação
-            case '/':
-                return operação
-            case '**':
-                return operação
-            case '//':
-                return operação
-            case _:
-                print('Este não é uma operação válida. Tente novamente.\n')
+        if operação in operações:
+            return operação
+        else:
+            print('Este não é uma operação válida. Tente novamente.\n')
 
 
 # Função para calcular o resultado a partir da operação e de dois valores

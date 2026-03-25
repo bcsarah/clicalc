@@ -20,16 +20,13 @@ export function validarNúmero(frase: string): number {
 
 // Função para validar a operação
 export function validarOperação(frase: string): string {
+    const operações: Array<String> = ['+', '-', '*', '/', '**', '//']
     while (true) {
         let operação = input(frase);
-        switch (operação) {
-            case '+': return operação;
-            case '-': return operação;
-            case '*': return operação;
-            case '/': return operação;
-            case '**': return operação;
-            case '//': return operação;
-            default: console.log('Essa não é uma operação válida. Tente novamente.\n');
+        if (operação in operações) {
+            return operação
+        } else {
+            console.log('Essa não é uma operação válida. Tente novamente.\n');
         }
     }
 }
