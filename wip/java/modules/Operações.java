@@ -1,3 +1,5 @@
+package modules;
+
 public class Operações {
     public static double somar(double a, double b) {
         return a + b;
