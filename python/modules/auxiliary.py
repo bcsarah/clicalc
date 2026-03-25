@@ -3,7 +3,7 @@ from modules.operacoes import somar, diminuir, multiplicar, dividir, expoenciar,
 
 
 # Função para ver se o número é válido
-def validarNúmero(frase: str) -> float:
+def validarNumero(frase: str) -> float:
     while True:
         try:
             return float(input(frase).replace(',', '.'))
@@ -12,7 +12,7 @@ def validarNúmero(frase: str) -> float:
 
 
 # Função para validar, ver se a operação é válida
-def validarOperação(frase: str) -> str:
+def validarOperacao(frase: str) -> str:
     operacoes = ['+', '-', '*', '/', '**', '//', '%']
     while True:
         operacao = input(frase).strip()

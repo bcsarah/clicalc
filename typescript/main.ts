@@ -1,5 +1,5 @@
 // Importa o prompt-sync e as funções de modules/auxiliary
-import { validarNumero, validarOperacao, calcularResultado } from './modules/auxiliary';
+import { validarNumero, validarOperacao, calcularResultado } from './modules/auxiliary.js';
 import promptSync from 'prompt-sync';
 
 const input = promptSync();
@@ -11,7 +11,7 @@ function main(): void {
     while (true) {
         console.clear();
         console.log('#  CLIcalc TS  #');
-        console.log('Digite quit ou sair para sair\n')
+        console.log('Digite "quit" ou "sair" para sair\n')
 
         // Define as variáveis para os cálculos
         let num1: number = validarNumero('Primeiro número: ');

@@ -1,5 +1,5 @@
 // Importa o prompt-sync e as funções de operações
-import { somar, diminuir, multiplicar, dividir, expoenciar, radiciar, restoDivisao } from './operacoes'
+import { somar, diminuir, multiplicar, dividir, expoenciar, radiciar, restoDivisao } from './operacoes.js'
 import promptSync from 'prompt-sync';
 
 const input = promptSync();
@@ -15,6 +15,8 @@ export function validarNumero(frase: string): number {
             return num;
         } else if (entrada == 'quit' || entrada == 'sair') {
             process.exit();
+        } else {
+            console.log('Este não é um número válido. Tente novamente.\n');
         }
     }
 }
@@ -26,8 +28,10 @@ export function validarOperacao(frase: string): string {
 
     while (true) {
         let operacao = input(frase);
-        if (operacao in operacoes) {
+        if (operacoes.includes(operacao)) {
             return operacao
+        } else if (operacao == 'quit' || operacao == 'sair') {
+            process.exit();
         } else {
             console.log('Essa não é uma operação válida. Tente novamente.\n');
         }
