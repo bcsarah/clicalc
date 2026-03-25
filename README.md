@@ -2,7 +2,9 @@
 
 CLIcalc é um projeto pessoal, desenvolvido como **template base** de várias linguagens de programação, com o objetivo de facilitar o aprendizado de novas linguagens de programação.
 
-A ideia principal é usar este projeto como um **desafio prático**, onde você recria sua estrutura em outra linguagem, como JavaScript, Java, TypeScript, Shell etc, aprendendo conceitos fundamentais como:
+A ideia principal é usar este projeto como um **desafio prático**, onde você recria sua estrutura em outra linguagem, como JavaScript, Java, TypeScript, Shell etc, analisando o código na linguagem que você já sabe.
+
+Ao fazer o código, é esperado aprender conceitos fundamentais, como:
 - Variáveis
 - Tipos de dados (int, str, float)
 - Operadores (+, -, *, /, =)
