@@ -17,20 +17,27 @@ public class Auxiliary {
     // Métodos para perguntar, retornando String ou Double
     public static String perguntar(String frase) {
         System.out.print(frase);
-        return scan.next();
+        return scan.nextLine();
     }
 
     public static double perguntarDouble(String frase) {
         System.out.print(frase);
-        return scan.nextDouble();
+        String entrada = scan.nextLine();
+        return Double.parseDouble(entrada);
     }
 
 
     // Método para validar número a partir de uma pergunta
     public static double validarNumero(String frase) {
         while (true) {
-            Double num = perguntarDouble(frase);
-            return num;
+            String entrada = perguntar(frase);
+
+            try {
+                return Double.parseDouble(entrada);
+            } catch ( Exception e ) {
+                System.out.println("Este não é um número válido. Tente novamente.\n");
+                continue;
+            }
         }
     }
 

@@ -16,8 +16,8 @@ public class App {
 
             // Cálculo
             Double resultado = Auxiliary.calcularResultado(operacao, num1, num2);
-            System.out.println("\nO resultado é: " + resultado);
-            scan.next();
+            System.out.print("\nO resultado é: " + resultado);
+            scan.nextLine();
         }
     }
 }
