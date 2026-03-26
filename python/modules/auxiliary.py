@@ -19,12 +19,12 @@ def validarOperacao(frase: str) -> str:
         if operacao in operacoes:
             return operacao
         else:
-            print('Este não é uma operação válida. Tente novamente.\n')
+            print('Esta não é uma operação válida. Tente novamente.\n')
 
 
 # Função para calcular o resultado a partir da operação e de dois valores
-def calcularResultado(operação: str, a: float, b: float) -> float:
-    match operação:
+def calcularResultado(operacao: str, a: float, b: float) -> float:
+    match operacao:
         case '+': return somar(a, b)
         case '-': return diminuir(a, b)
         case '*': return multiplicar(a, b)
