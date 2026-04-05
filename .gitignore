@@ -5,4 +5,7 @@ package-lock.json
 
 bin/
 *.class
-.vscode/
+.classpath
+.project
+.settings/
+target/

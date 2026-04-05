@@ -1,9 +1,5 @@
-import modules.Auxiliary;
-import java.util.Scanner;
-
+// Main
 public class App {
-    static Scanner scan = new Scanner(System.in);
-
     public static void main(String[] args) throws Exception {
         while (true) {
             Auxiliary.clearScreen();
@@ -17,7 +13,7 @@ public class App {
             // Cálculo
             Double resultado = Auxiliary.calcularResultado(operacao, num1, num2);
             System.out.print("\nO resultado é: " + resultado);
-            scan.nextLine();
+            Auxiliary.scan.nextLine();
         }
     }
 }

@@ -1,5 +1,3 @@
-package modules;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +15,12 @@ public class Auxiliary {
     // Métodos para perguntar, retornando String ou Double
     public static String perguntar(String frase) {
         System.out.print(frase);
-        return scan.nextLine();
+        return scan.nextLine().strip();
     }
 
     public static double perguntarDouble(String frase) {
         System.out.print(frase);
-        String entrada = scan.nextLine();
+        String entrada = scan.nextLine().strip();
         return Double.parseDouble(entrada);
     }
 
