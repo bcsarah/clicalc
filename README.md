@@ -1,5 +1,4 @@
-# CLIcalc
-
+# 🧮 CLIcalc
 CLIcalc é um projeto pessoal, desenvolvido como **template base** de várias linguagens de programação, com o objetivo de facilitar o aprendizado de novas linguagens de programação.
 
 A ideia principal é usar este projeto como um **desafio prático**, onde você recria sua estrutura em outra linguagem, como JavaScript, Java, TypeScript, Shell etc, analisando o código na linguagem que você já sabe.
